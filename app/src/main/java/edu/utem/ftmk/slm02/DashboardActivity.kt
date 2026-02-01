@@ -152,7 +152,7 @@ class DashboardActivity : AppCompatActivity() {
             val file = File(cacheDir, fileName)
             file.writeText(sb.toString())
 
-            val uri = FileProvider.getUriForFile(this, "${packageName}.provider", file)
+            val uri = FileProvider.getUriForFile(this, "${packageName}.fileprovider", file)
             val intent = Intent(Intent.ACTION_SEND)
 
             // MIME type for CSV
